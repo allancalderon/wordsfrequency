@@ -74,7 +74,9 @@ class WordsFrequency(object):
     def process_text(self, text = '', new_stopwords=[]):
         self.__words = self.__words_process(text, new_stopwords)
         self.__words_stemmed = self.__words_process_stemmed()
+        #TODO: create dictionary with { stemmedword: [word1, word2, ...], ...}
         self.__words_frequency = self.__words_process_frequency()
+        #TODO: ranking stemmedword with a specific dictionary
         return self.get_words_frequency()
 
 #Download the spanish stopwords first with nltk.download()
